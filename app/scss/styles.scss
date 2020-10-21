@@ -1,0 +1,27 @@
+$bg: #333333;
+$primary: #1f464d;
+$primary-light:#3697a7;
+
+body,html {
+    margin:0px;
+    padding:0px;
+    min-height:100%;
+}
+
+body {
+    background: $bg;
+    color: white;
+}
+
+.btn-primary{
+    background: $primary-light;
+}
+
+
+h1,h2,h3{
+    text-transform: uppercase;
+}
+
+.site-header{
+    background: $primary;
+}
