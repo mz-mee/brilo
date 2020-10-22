@@ -1,0 +1,114 @@
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+  }
+  
+  @mixin border-radiuses ($topright: 0, $bottomright: 0, $bottomleft: 0, $topleft: 0) {
+      -webkit-border-top-right-radius:    $topright;
+      -webkit-border-bottom-right-radius: $bottomright;
+      -webkit-border-bottom-left-radius:  $bottomleft;
+      -webkit-border-top-left-radius:     $topleft;
+  
+      -moz-border-radius-top-right:        $topright;
+      -moz-border-radius-bottom-right:     $bottomright;
+      -moz-border-radius-bottom-left:      $bottomleft;
+      -moz-border-radius-top-left:         $topleft;
+  
+      border-top-right-radius:            $topright;
+      border-bottom-right-radius:         $bottomright;
+      border-bottom-left-radius:          $bottomleft;
+      border-top-left-radius:             $topleft;
+  
+      -moz-background-clip:    padding; 
+      -webkit-background-clip: padding-box; 
+      background-clip:         padding-box; 
+  }
+  
+  
+  @mixin boxie-shadow($top, $left, $blur, $color, $inset:"") {
+      -webkit-box-shadow:$top $left $blur $color #{$inset};
+      -moz-box-shadow:$top $left $blur $color #{$inset};
+      box-shadow:$top $left $blur $color #{$inset};
+    }
+  
+  @mixin box-shadow($radius: 5px, $color: silver) {
+    -webkit-box-shadow: 0 0 $radius $color;
+    -moz-box-shadow: 0 0 $radius $color;
+    box-shadow: 0 0 $radius $color;
+  }
+  
+  @mixin transform($x,$y){
+      transform:translate($x,$y);
+      -webkit-transform:translate($x,$y);
+      -moz-transform:translate($x,$y);
+      -ms-transform:translate($x,$y);
+  }
+  
+  @mixin transition($transition...) {
+      -moz-transition:    $transition;
+      -o-transition:      $transition;
+      -webkit-transition: $transition;
+      transition:         $transition;
+  }
+  @mixin transition-property($property...) {
+      -moz-transition-property:    $property;
+      -o-transition-property:      $property;
+      -webkit-transition-property: $property;
+      transition-property:         $property;
+  }
+  @mixin transition-duration($duration...) {
+      -moz-transition-property:    $duration;
+      -o-transition-property:      $duration;
+      -webkit-transition-property: $duration;
+      transition-property:         $duration;
+  }
+  @mixin transition-timing-function($timing...) {
+      -moz-transition-timing-function:    $timing;
+      -o-transition-timing-function:      $timing;
+      -webkit-transition-timing-function: $timing;
+      transition-timing-function:         $timing;
+  }
+  @mixin transition-delay($delay...) {
+      -moz-transition-delay:    $delay;
+      -o-transition-delay:      $delay;
+      -webkit-transition-delay: $delay;
+      transition-delay:         $delay;
+  }
+  
+  @mixin grow($scale, $duration: 0.3s) {
+    @include transition($duration);
+    -webkit-perspective: 1000px; perspective: 1000px;
+    -webkit-backface-visibility: hidden; -moz-backface-visibility: hidden; -ms-backface-visibility: hidden; backface-visibility: hidden;
+  
+    &:hover {
+      -webkit-perspective: 1000px;
+      perspective: 1000px;
+      -webkit-backface-visibility: hidden; -moz-backface-visibility: hidden; -ms-backface-visibility: hidden; backface-visibility: hidden;
+      -webkit-transform: scale($scale) translateZ(0);
+      -moz-transform: scale($scale) translateZ(0);
+      -ms-transform: scale($scale) translateZ(0);
+      -o-transform: scale($scale) translateZ(0);
+      transform: scale($scale) translateZ(0);
+    }
+  }
+  
+  @mixin flex{
+      display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+      display: -ms-flexbox;  /* TWEENER - IE 10 */
+      display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+      display: flex; 
+  }
+  
+  @mixin gradient($direction, $list) {
+    background: -webkit-linear-gradient($direction, $list);
+    background: -moz-linear-gradient($direction, $list);
+    background: -o-linear-gradient($direction, $list);
+    background: linear-gradient($direction, $list);
+  }
+  
+  
+  
+    
+  
+  

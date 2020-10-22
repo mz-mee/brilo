@@ -1,11 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400&display=swap");
+@import url(_helpers.css);
+html {
+  font-size: 54.5%;
+  height: 100%;
+  min-height: 100%;
+  scroll-behavior: smooth; }
+  @media (min-width: 992px) {
+    html {
+      font-size: 58.5%; } }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  margin: 0px;
+  padding: 0px;
+  background: #333333;
+  font-size: 1.6rem; }
+
 body, html {
   margin: 0px;
   padding: 0px;
   min-height: 100%; }
 
-body {
-  background: #333333;
-  color: white; }
-
 h1, h2, h3 {
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  font-weight: 100; }
+
+h1 {
+  font-size: 4rem; }
+
+h2 {
+  font-size: 3rem; }
+
+h3 {
+  font-size: 2.4rem; }
+
+.btn-primary {
+  background: #3697a7;
+  text-decoration: none;
+  color: white;
+  padding: 1% 12%;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 1.8rem;
+  display: inline-block; }
+
+.container {
+  width: 2008px;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 0px 15px;
+  margin: 0 auto; }
+  @media (min-width: 992px) {
+    .container {
+      max-width: 80%;
+      padding: 0px; } }
+
+.section {
+  padding: 30px 0px; }
+  @media (min-width: 992px) {
+    .section {
+      padding: 120px 0px; } }
+
+.site-navigation {
+  width: 100%; }
+  .site-navigation__container {
+    width: 100%;
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;
+    justify-content: flex-end;
+    padding: 40px 0px;
+    margin: 0px; }
+  .site-navigation__item {
+    list-style: none;
+    padding: 0px 2%; }
+    .site-navigation__item:last-child {
+      padding-right: 0px; }
+  .site-navigation__link {
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    font-weight: 100;
+    color: white;
+    text-decoration: none; }
+
+.site-header {
+  background: #1f464d; }
+
+.main-footer {
+  padding-bottom: 4%; }
+  .main-footer__container {
+    text-align: center;
+    font-weight: 400; }
+
+.about__container {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  display: flex;
+  align-items: center;
+  padding: 20px 0px;
+  flex-direction: column-reverse; }
+  @media (min-width: 576px) {
+    .about__container {
+      flex-direction: row-reverse; } }
+  @media (min-width: 992px) {
+    .about__container {
+      flex-direction: row;
+      min-height: calc(100vh - 100px);
+      padding: 0px; } }
+
+.about__text {
+  flex: 1 1 auto;
+  box-sizing: border-box; }
+  @media (min-width: 992px) {
+    .about__text {
+      padding-right: 10%; } }
+
+.about__image {
+  width: 100%;
+  text-align: right; }
+  @media (min-width: 576px) {
+    .about__image {
+      padding-right: 20px; } }
+  @media (min-width: 992px) {
+    .about__image {
+      padding-right: 0px; } }
+  .about__image img {
+    display: inline-block;
+    max-width: 100%; }
+
+.work-container {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  display: flex;
+  padding: -10px;
+  margin: 0px -10px;
+  flex-wrap: wrap;
+  justify-content: center; }
+  @media (min-width: 992px) {
+    .work-container {
+      margin: 0px -20px; } }
+  .work-container__item {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px; }
+    @media (min-width: 576px) {
+      .work-container__item {
+        width: 50%; } }
+    @media (min-width: 992px) {
+      .work-container__item {
+        width: 33.333%;
+        padding: 20px; } }
+    @media (max-width: 576px) {
+      .work-container__item-container {
+        display: -webkit-box;
+        /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+        display: -ms-flexbox;
+        /* TWEENER - IE 10 */
+        display: -webkit-flex;
+        /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+        display: flex; } }
+    .work-container__item-pic {
+      width: 100%;
+      height: 250px;
+      position: relative; }
+      .work-container__item-pic img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%; }
+      .work-container__item-pic:before {
+        content: "";
+        width: 90%;
+        height: 90%;
+        position: absolute;
+        left: 5%;
+        top: 5%;
+        border: 1px solid grey;
+        display: block;
+        box-sizing: border-box; }
+    .work-container__item-heading {
+      font-weight: 400; }
+    .work-container__item-text {
+      background: #3697a7;
+      padding: 30px 20px;
+      box-sizing: border-box; }

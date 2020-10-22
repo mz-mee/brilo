@@ -1,0 +1,68 @@
+.work-container{
+    @include flex();
+    padding: -10px;
+    margin:0px -10px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+        @include desktop{
+            margin:0px -20px;
+        }
+
+    &__item{
+        width:100%;
+        box-sizing: border-box;
+        padding:10px;
+
+            @include mobile{
+                width:50%;
+            }
+
+            @include desktop{
+                width:33.333%;
+                padding:20px;
+            }
+
+        &-container{
+
+            @include maxmobile{
+                @include flex();
+            }
+        }    
+
+        &-pic{
+            width:100%;
+            height: 250px;
+            position: relative;
+
+            img{
+                object-fit: cover;
+                width:100%;
+                height:100%;
+            }
+
+            &:before{
+                content:"";
+                width:90%;
+                height:90%;
+                position: absolute;
+                left:5%;
+                top:5%;
+                border: 1px solid grey;
+                display: block;
+                box-sizing: border-box;
+            }
+        }
+
+        &-heading{
+            font-weight: 400;
+        }
+
+        &-text{
+            background: $primary-light;
+            padding:30px 20px;
+            box-sizing: border-box;
+        }
+
+    }
+}

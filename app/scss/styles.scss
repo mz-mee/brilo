@@ -1,27 +1,19 @@
-$bg: #333333;
-$primary: #1f464d;
-$primary-light:#3697a7;
+@import "_variables.scss";
+@import "_mixins.scss";
+@import "_breakpoints.scss";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400&display=swap');
 
-body,html {
-    margin:0px;
-    padding:0px;
-    min-height:100%;
-}
+@import "_base.scss";
+@import "_elements.scss";
+@import "_helpers.css";
 
-body {
-    background: $bg;
-    color: white;
-}
-
-.btn-primary{
-    background: $primary-light;
-}
+@import "parts/parts.scss";
+@import "sections/sections.scss";
 
 
-h1,h2,h3{
-    text-transform: uppercase;
-}
 
-.site-header{
-    background: $primary;
-}
+
+
+
+
+

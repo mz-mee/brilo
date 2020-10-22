@@ -6,7 +6,7 @@ var concat = require('gulp-concat');
 var browserSync = require('browser-sync').create()
 
 gulp.task('sass', function() {
-    return gulp.src('app/scss/**/*.scss')
+    return gulp.src('app/scss/styles.scss')
       .pipe(sass())
       .pipe(concat('style.css'))
       .pipe(gulp.dest('./app/css/'))
@@ -32,7 +32,7 @@ gulp.task('browserSync', function() {
 })
 
 gulp.task('watch', function(){
-    gulp.watch('app/scss/**/*.scss', gulp.series(['sass','scripts','browserSync']));
+    gulp.watch('app/scss/**/*.scss', gulp.series(['sass','scripts']));
     gulp.watch('app/*.html', browserSync.reload); 
     gulp.watch('app/js/**/*.js', browserSync.reload);
 });

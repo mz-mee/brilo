@@ -10,63 +10,77 @@
 
 <body>
     <header class="site-header" role="banner">
-        <nav role="navigation" class="site-navigation">
-            <ul class="site-navigation__container">
-                <li class="site-navigation__item"><a class="site-navigation__link">Home</a></li>
-                <li class="site-navigation__item"><a class="site-navigation__link">About me</a></li>
-                <li class="site-navigation__item"><a class="site-navigation__link">My work</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <nav role="navigation" class="site-navigation">
+                <ul class="site-navigation__container">
+                    <li class="site-navigation__item"><a href="#about" class="site-navigation__link">Home</a></li>
+                    <li class="site-navigation__item"><a href="#" class="site-navigation__link">About me</a></li>
+                    <li class="site-navigation__item"><a href="#work" class="site-navigation__link">My work</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 	<main class="site-main" role="main">
-        <section class="about" role="region">
-            <div class="about-text">
-                <h1>Jack Jackson</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean placerat. 
-                    Duis condimentum augue id magna semper rutrum. Aliquam ante. 
-                    Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
-                    <a class="btn-primary">Learn more</a>
-            </div>
-            <div class="about-image">
-                <img src="https://placehold.it/300x300" alt="Jack Jackson">
+        <section id="about" class="about" role="region">
+            <div class="container">
+                <div class="about__container">
+                    <div class="about__text">
+                        <h1>Jack Jackson</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean placerat. 
+                            Duis condimentum augue id magna semper rutrum. Aliquam ante. 
+                            Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
+                            <a href="#" class="btn-primary mt-5">Learn more</a>
+                    </div>
+                    <div class="about__image">
+                        <img src="images/img-profile.jpg" alt="Jack Jackson">
+                    </div>
+                </div> 
             </div>
         </section>
-        <section class="work" role="region">
-            <h2>What I did</h2>
-            <div class="work-container">
-                <div class="work-container__item">
-                    <div class="work-container__item-container">
-                        <div class="work-container__item-pic">
-                            <img src="https://plachold.it/600x400"/>
-                        </div>
-                        <div class="work-container__item-text">
-                            <h3>Epic project</h3>
-                            <p>Awesome project i did in 2008. I was big experience for me.</p>
-                        </div>
-                    </div>
-                    <div class="work-container__item-container">
-                        <div class="work-container__item-pic">
-                            <img src="https://plachold.it/600x400"/>
-                        </div>
-                        <div class="work-container__item-text">
-                            <h3>Epic project</h3>
-                            <p>Awesome project i did in 2008. I was big experience for me.</p>
+        <section id="work" class="work section" role="region">
+            <div class="container">
+                <h2>What I did</h2>
+                <div class="work-container">
+                    <div class="work-container__item">
+                        <div class="work-container__item-container">
+                            <div class="work-container__item-pic">
+                                <img src="images/img_2.jpeg"/>
+                            </div>
+                            <div class="work-container__item-text">
+                                <h3 class="work-container__item-heading">Epic project</h3>
+                                <p>Awesome project i did in 2008. I was big experience for me.</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="work-container__item-container">
-                        <div class="work-container__item-pic">
-                            <img src="https://plachold.it/600x400"/>
-                        </div>
-                        <div class="work-container__item-text">
-                            <h3>Epic project</h3>
-                            <p>Awesome project i did in 2008. I was big experience for me.</p>
+                    <div class="work-container__item">  
+                        <div class="work-container__item-container">
+                            <div class="work-container__item-pic">
+                                <img src="images/img_1.jpg"/>
+                            </div>
+                            <div class="work-container__item-text">
+                                <h3 class="work-container__item-heading">Epic project</h3>
+                                <p>Awesome project i did in 2008. I was big experience for me.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
+                    <div class="work-container__item">  
+                        <div class="work-container__item-container">
+                            <div class="work-container__item-pic">
+                                <img src="images/img_3.jpg"/>
+                            </div>
+                            <div class="work-container__item-text">
+                                <h3 class="work-container__item-heading">Epic project</h3>
+                                <p>Awesome project i did in 2008. I was big experience for me.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
             </div>
         </section>
         <footer class="main-footer" role="navigation">
-            © Jack Jackson 2020
+            <div class="main-footer__container container">
+                © Jack Jackson 2020
+            </div>
         </footer>
     </main>
 </body>    

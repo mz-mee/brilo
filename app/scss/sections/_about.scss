@@ -1,0 +1,46 @@
+.about{
+    
+    &__container{
+        @include flex();
+        align-items: center;
+        padding:20px 0px;
+        flex-direction: column-reverse;
+        
+            @include mobile{
+                flex-direction: row-reverse;
+            }
+
+            @include desktop{
+                flex-direction: row;
+                min-height: calc(100vh - 100px);
+                padding: 0px; 
+            }
+    }
+
+    &__text{
+        flex:1 1 auto;
+        box-sizing: border-box;
+
+        @include desktop{
+            padding-right: 10%;
+        }
+    }
+
+    &__image{
+        width:100%;
+        text-align: right;
+
+        @include mobile{
+            padding-right: 20px;
+        }
+
+        @include desktop{
+            padding-right: 0px;
+        }
+
+        img{
+            display: inline-block;
+            max-width: 100%;
+        }
+    }
+}
